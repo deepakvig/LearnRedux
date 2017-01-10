@@ -103,15 +103,13 @@
 	    IndexRoute = _require.IndexRoute,
 	    hashHistory = _require.hashHistory;
 
+	var TodoApp = __webpack_require__(233);
+
 	$(document).foundation();
 
 	__webpack_require__(229);
 
-	ReactDOM.render(React.createElement(
-	  'p',
-	  null,
-	  'Boilerplate 3 Project'
-	), document.getElementById('app'));
+	ReactDOM.render(React.createElement(TodoApp, null), document.getElementById('app'));
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ },
@@ -25813,6 +25811,32 @@
 			URL.revokeObjectURL(oldSrc);
 	}
 
+
+/***/ },
+/* 233 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(8);
+
+	var TodoApp = React.createClass({
+			displayName: 'TodoApp',
+
+			render: function render() {
+					return React.createElement(
+							'div',
+							null,
+							React.createElement(
+									'p',
+									null,
+									'TodoApp.jsx'
+							)
+					);
+			}
+	});
+
+	module.exports = TodoApp;
 
 /***/ }
 /******/ ]);
